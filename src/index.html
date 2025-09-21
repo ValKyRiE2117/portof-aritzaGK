@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aritza Ganendra Kusuma - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #6685ea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center">
+          <div class="flex items-center space-x-8 mx-auto">
+            <a href="#about" class="hover:text-cyan-400 transition text-sm"
+              >About</a
+            >
+            <a href="#skills" class="hover:text-cyan-400 transition text-sm"
+              >Skills</a
+            >
+            <a href="#portfolio" class="hover:text-cyan-400 transition text-sm"
+              >Portfolio</a
+            >
+            <a
+              href="#certificates"
+              class="hover:text-cyan-400 transition text-sm"
+              >Certificates</a
+            >
+            <a href="#contact" class="hover:text-cyan-400 transition text-sm"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-gray-950 via-purple-900/5 to-cyan-900/10"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center">
+          <div class="mb-8">
+            <img
+              src="/assets/my_girl.jpg"
+              alt="Profile"
+              class="w-48 rounded-xl mx-auto mb-6 border-2 border-cyan-400"
+            />
+          </div>
+          <h1 class="text-2xl md:text-4xl font-bold mb-4">
+            <span class="gradient-text">Aritza Ganendra Kusuma, A.Md.Kom</span>
+          </h1>
+          <p class="text-gray-200 text-lg mb-2">
+            Web Developer & UI/UX Designer
+          </p>
+          <p class="text-gray-400 max-w-2xl mx-auto mb-8 text-sm">
+            Lulusan Teknik Informatika dengan keahlian dalam pengembangan
+            website menggunakan framework modern seperti Laravel dan Next.js.
+            Fokus pada menciptakan solusi digital yang user-friendly dan
+            estetis.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <a
+              href="/assets/CV-Main.pdf"
+              target="_blank"
+              class="px-6 py-3 bg-cyan-400 text-gray-900 rounded-lg font-semibold hover:bg-cyan-300 transition"
+            >
+              <i class="fas fa-download mr-2"></i>Download CV
+            </a>
+            <a
+              href="#contact"
+              class="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition"
+            >
+              Contact Me
+            </a>
+          </div>
+          <div class="mt-12 text-xs text-gray-400">
+            Put me to <span class="text-cyan-400">work</span> ✨
+          </div>
+        </div>
+      </div>
+      <!-- Gradient fade to next section -->
+      <div
+        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-950"
+      ></div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
+          About Me
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
+          <div class="px-6">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-map-marker-alt text-cyan-400 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Location</p>
+                <p class="font-semibold">Semarang, Jawa Tengah</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <i class="fas fa-graduation-cap text-cyan-400 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Awards</p>
+                <p class="font-semibold">
+                  A.Md.Kom, (D3 - Lulusan Terbaik, Cumlaude)
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-briefcase text-cyan-400 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Education</p>
+                <p class="font-semibold">
+                  D3 Teknik Informatika - UDINUS (2022-2025)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-6">
+            <h3 class="text-xl font-bold mb-4 text-cyan-400">
+              Pengalaman Professional
+            </h3>
+            <div class="space-y-3">
+              <div>
+                <p class="font-semibold">Freelance Developer & Designer</p>
+                <p class="text-gray-400 text-sm">
+                  3 proyek klien website diselesaikan
+                </p>
+              </div>
+              <div>
+                <p class="font-semibold">Lab Assistant & Programmer</p>
+                <p class="text-gray-400 text-sm">UDINUS - 10 bulan</p>
+              </div>
+              <div>
+                <p class="font-semibold">Data Management - Intern</p>
+                <p class="text-gray-400 text-sm">Telkom - 4 bulan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Technologies -->
+    <section id="skills" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
+          Skills & Technologies
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <!-- Frontend Skills -->
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
+            <h3 class="font-semibold mb-1">HTML</h3>
+            <p class="text-gray-400 text-xs">Frontend</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3"></i>
+            <h3 class="font-semibold mb-1">CSS</h3>
+            <p class="text-gray-400 text-xs">Frontend</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-js text-4xl text-yellow-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">JavaScript</h3>
+            <p class="text-gray-400 text-xs">Frontend</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-php text-4xl text-purple-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">PHP</h3>
+            <p class="text-gray-400 text-xs">Backend</p>
+          </div>
+
+          <!-- Framework Skills -->
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-laravel text-4xl text-red-500 mb-3"></i>
+            <h3 class="font-semibold mb-1">Laravel</h3>
+            <p class="text-gray-400 text-xs">Backend</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fas fa-code text-4xl text-cyan-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">CodeIgniter</h3>
+            <p class="text-gray-400 text-xs">Backend</p>
+          </div>
+
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-react text-4xl text-cyan-300 mb-3"></i>
+            <h3 class="font-semibold mb-1">NextJS</h3>
+            <p class="text-gray-400 text-xs">Frontend</p>
+          </div>
+          <!-- CSS Frameworks & Tools -->
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fas fa-wind text-4xl text-cyan-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">Tailwind CSS</h3>
+            <p class="text-gray-400 text-xs">Frontend</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-bootstrap text-4xl text-purple-600 mb-3"></i>
+            <h3 class="font-semibold mb-1">Bootstrap</h3>
+            <p class="text-gray-400 text-xs">Frontend</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fas fa-database text-4xl text-blue-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">MySQL</h3>
+            <p class="text-gray-400 text-xs">Database</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i
+              class="fa fa-brands fa-git-alt text-4xl text-orange-600 mb-3"
+            ></i>
+            <h3 class="font-semibold mb-1">GIT</h3>
+            <p class="text-gray-400 text-xs">DevOps</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fab fa-figma text-4xl text-pink-500 mb-3"></i>
+            <h3 class="font-semibold mb-1">Figma</h3>
+            <p class="text-gray-400 text-xs">Design</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fa-solid fa-pen-nib text-4xl text-cyan-500 mb-3"></i>
+            <h3 class="font-semibold mb-1">Canva</h3>
+            <p class="text-gray-400 text-xs">Design</p>
+          </div>
+          <div
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          >
+            <i class="fas fa-globe text-4xl text-green-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">Web Hosting</h3>
+            <p class="text-gray-400 text-xs">DevOps</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
+          Portfolio
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <!-- Project 1 -->
+          <div
+            class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          >
+            <!-- Image instead of background -->
+            <img
+              src="/assets/project-1.png"
+              alt="Project Preview"
+              class="w-full object-cover"
+            />
+
+            <div class="p-6">
+              <span class="text-cyan-400 text-xs font-semibold"
+                >Landing Page</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Website Profil Program Studi
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Mengembang & mengembangkan website profil program studi dengan
+                desain modern dan responsive.
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >JQuery</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Filament</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Tailwind CSS</span
+                >
+              </div>
+              <a
+                href="https://dti.dinus.ac.id/"
+                target="_blank"
+                class="text-cyan-400 text-sm hover:underline"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          >
+            <!-- Image instead of background -->
+            <img
+              src="/assets/project-2.png"
+              alt="Project Preview"
+              class="w-full object-cover"
+            />
+
+            <div class="p-6">
+              <span class="text-cyan-400 text-xs font-semibold"
+                >Full Stack</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Sistem Monitoring Mahasiswa
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Sistem monitoring berbasis Website untuk pemantauan akademik
+                mahasiswa.
+              </p>
+              <div class="flex space-x-2 mb-4 flex-wrap">
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Livewire</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Tailwind CSS</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
+              <a
+                href="https://dti.dinus.ac.id/sistem-monitoring-mahasiswa/"
+                target="_blank"
+                class="text-cyan-400 text-sm hover:underline"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          >
+            <!-- Image instead of background -->
+            <img
+              src="/assets/project-3.png"
+              alt="Project Preview"
+              class="w-full object-cover"
+            />
+
+            <div class="p-6">
+              <span class="text-cyan-400 text-xs font-semibold"
+                >Full Stack</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Website Ticketing - Sky Access Network
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Mengembangkan website ticketing sederhana dan landing page klien
+                freelance.
+              </p>
+              <div class="flex space-x-2 mb-4">
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >JQuery</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >MySQL</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Tailwind CSS</span
+                >
+              </div>
+              <a
+                href="https://skyaccessnetwork.com/"
+                target="_blank"
+                class="text-cyan-400 text-sm hover:underline"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          >
+            <!-- Image instead of background -->
+            <img
+              src="/assets/project-4.png"
+              alt="Project Preview"
+              class="w-full object-cover"
+            />
+
+            <div class="p-6">
+              <span class="text-cyan-400 text-xs font-semibold"
+                >Landing Page</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Website Busana Nyaman Pakai
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Website Landing Page CV Busana Nyaman Pakai - Produsen Toga
+                Wisuda & Jas Almamater
+              </p>
+              <div class="flex space-x-2 mb-4 flex-wrap">
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Filament</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Tailwind CSS</span
+                >
+              </div>
+              <a
+                href="https://konveksibusananyamanpakai.com/"
+                target="_blank"
+                class="text-cyan-400 text-sm hover:underline"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          >
+            <!-- Image instead of background -->
+            <img
+              src="/assets/project-5.png"
+              alt="Project Preview"
+              class="w-full object-cover"
+            />
+
+            <div class="p-6">
+              <span class="text-cyan-400 text-xs font-semibold"
+                >Full Stack</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Website Wedding App - Ongoing
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Wesbite Booking Pernikahan Sederahana Full Stack
+              </p>
+              <div class="flex space-x-2 mb-4 flex-wrap">
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Filament</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >NextJS</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
+              <a
+                href="https://github.com/ValKyRiE2117/WeddingWebsite"
+                target="_blank"
+                class="text-cyan-400 text-sm hover:underline"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          >
+            <!-- Image instead of background -->
+            <img
+              src="/assets/project-6.jpeg"
+              alt="Project Preview"
+              class="w-full object-cover"
+            />
+
+            <div class="p-6">
+              <span class="text-cyan-400 text-xs font-semibold"
+                >E - Commerce</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">Website - VeggiePack</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Website E - Commerce Sederhana VeggiePack
+              </p>
+              <div class="flex space-x-2 mb-4 flex-wrap">
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >CodeIgniter</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Bootstrap</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >JQuery</span
+                >
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
+              <a
+                href="https://github.com/ValKyRiE2117/VeggiePack"
+                target="_blank"
+                class="text-cyan-400 text-sm hover:underline"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div
+            class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          >
+            <!-- Image instead of background -->
+            <img
+              src="/assets/project-7.jpeg"
+              alt="Project Preview"
+              class="w-full object-cover"
+            />
+
+            <div class="p-6">
+              <span class="text-cyan-400 text-xs font-semibold">UI/UX</span>
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Staybook App - Hotel Booking App
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Design UI/UX Aplikasi Booking Hotel Modern menggunakan Figma
+              </p>
+              <div class="flex space-x-2 mb-4 flex-wrap">
+                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
+                  >Figma</span
+                >
+              </div>
+              <a
+                href="https://www.figma.com/design/G3UGVmjjAkg2prKaucSWwQ/StayBook?node-id=0-1&t=lie0lWsCjvS8XXlC-1"
+                target="_blank"
+                class="text-cyan-400 text-sm hover:underline"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates & Awards Section -->
+    <section id="certificates" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
+          Certificates & Awards
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- Certificate 1 -->
+          <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-award text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2022</span>
+            <h3 class="font-bold mt-1 mb-2">
+              MTCNA (MikroTik Certified Network Associate)
+            </h3>
+            <p class="text-gray-400 text-sm">MikroTik</p>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-certificate text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2023</span>
+            <h3 class="font-bold mt-1 mb-2">
+              Sertifikat Latihan Keterampilan Manajemen Mahasiswa
+            </h3>
+            <p class="text-gray-400 text-sm">Universitas Dian Nuswantoro</p>
+          </div>
+
+          <!-- Certificate 3 -->
+          <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-code text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2024</span>
+            <h3 class="font-bold mt-1 mb-2">
+              Sertifikasi Junior Web Developer
+            </h3>
+            <p class="text-gray-400 text-sm">
+              Lembaga Sertifikasi Profesi Universitas Dian Nuswantoro
+            </p>
+          </div>
+
+          <!-- Certificate 4 -->
+          <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-users text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2024</span>
+            <h3 class="font-bold mt-1 mb-2">
+              Sertifikat Pembekalan Calon Pengurus Organisasi
+            </h3>
+            <p class="text-gray-400 text-sm">Universitas Dian Nuswantoro</p>
+          </div>
+
+          <!-- Certificate 5 -->
+          <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-mobile-alt text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2024</span>
+            <h3 class="font-bold mt-1 mb-2">
+              Sertifikasi Junior Mobile Programmer
+            </h3>
+            <p class="text-gray-400 text-sm">
+              Lembaga Sertifikasi Profesi Universitas Dian Nuswantoro
+            </p>
+          </div>
+
+          <!-- Certificate 6 -->
+          <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-laptop-code text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2024</span>
+            <h3 class="font-bold mt-1 mb-2">
+              Sertifikat "Full Stack Laravel 11 Next JS: Bikin Web Pernikahan"
+            </h3>
+            <p class="text-gray-400 text-sm">Build With Angga</p>
+          </div>
+
+          <!-- Certificate 7 -->
+          <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-language text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2025</span>
+            <h3 class="font-bold mt-1 mb-2">Sertifikat TOEFL, Skor : 607</h3>
+            <p class="text-gray-400 text-sm">Brighten English Pare Kediri</p>
+          </div>
+
+          <!-- Certificate 8 -->
+          <!-- <div
+            class="glass-card rounded-xl p-6 hover:scale-105 transition-transform"
+          >
+            <div class="text-cyan-400 mb-3">
+              <i class="fas fa-graduation-cap text-3xl"></i>
+            </div>
+            <span class="text-gray-400 text-xs">2025</span>
+            <h3 class="font-bold mt-1 mb-2">
+              Sertifikat "Full Stack Laravel 11 Vue JS: Website Donor Digital"
+            </h3>
+            <p class="text-gray-400 text-sm">Build With Angga</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-4 gradient-text">
+          Get In Touch
+        </h2>
+        <p class="text-gray-400 text-center mb-12">
+          Mari berkolaborasi dan wujudkan proyek teknologi yang luar biasa
+          bersama!
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <a
+            href="#"
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-pointer"
+          >
+            <i class="fas fa-envelope text-3xl text-cyan-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">Email</h3>
+            <p class="text-gray-400 text-sm">aritzagk@gmail.com</p>
+          </a>
+          <a
+            href="https://wa.me/6289501868361"
+            target="_blank"
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-pointer"
+          >
+            <i class="fab fa-whatsapp text-3xl text-cyan-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">No HP</h3>
+            <p class="text-gray-400 text-sm">089501868361</p>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/aritza-kusuma-3b0b92225/"
+            target="_blank"
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-pointer"
+          >
+            <i class="fab fa-linkedin text-3xl text-cyan-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">LinkedIn</h3>
+            <p class="text-gray-400 text-sm">Connect with me</p>
+          </a>
+
+          <a
+            href="https://github.com/ValKyRiE2117"
+            target="_blank"
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-pointer"
+          >
+            <i class="fab fa-github text-3xl text-cyan-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">GitHub</h3>
+            <p class="text-gray-400 text-sm">View my code</p>
+          </a>
+
+          <a
+            href="https://www.instagram.com/_ritzaa_/"
+            target="_blank"
+            class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-pointer"
+          >
+            <i class="fab fa-instagram text-3xl text-cyan-400 mb-3"></i>
+            <h3 class="font-semibold mb-1">Instagram</h3>
+            <p class="text-gray-400 text-sm">Follow me</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-400 text-sm">
+          © 2025 Aritza Ganendra Kusuma. Built with Love 💖.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
