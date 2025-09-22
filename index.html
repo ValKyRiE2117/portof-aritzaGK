@@ -11,8 +11,9 @@
     />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
       body {
-        font-family: "Inter", sans-serif;
+        font-family: "Plus Jakarta Sans", sans-serif;
       }
       .gradient-text {
         background: linear-gradient(135deg, #6685ea 0%, #764ba2 100%);
@@ -24,14 +25,45 @@
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
+
+      .mobile-menu-enter {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      .mobile-menu-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms ease-out, transform 300ms ease-out;
+      }
+
+      .burger-line {
+        transition: all 0.3s ease;
+      }
+
+      .burger-open .line-1 {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .burger-open .line-2 {
+        opacity: 0;
+      }
+
+      .burger-open .line-3 {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
     </style>
   </head>
   <body class="bg-gray-950 text-white">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
       <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center">
-          <div class="flex items-center space-x-8 mx-auto">
+        <div class="flex items-center justify-between">
+          <!-- Logo/Brand (optional) -->
+          <div class="text-xl font-bold text-cyan-400 lg:hidden">Portfolio</div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8 mx-auto">
             <a href="#about" class="hover:text-cyan-400 transition text-sm"
               >About</a
             >
@@ -42,11 +74,68 @@
               >Portfolio</a
             >
             <a
+              href="#organization"
+              class="hover:text-cyan-400 transition text-sm"
+              >Activities</a
+            >
+            <a
               href="#certificates"
               class="hover:text-cyan-400 transition text-sm"
               >Certificates</a
             >
             <a href="#contact" class="hover:text-cyan-400 transition text-sm"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Burger Button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden relative w-6 h-6 focus:outline-none"
+          >
+            <div
+              class="burger-line line-1 absolute h-0.5 w-6 bg-white top-0"
+            ></div>
+            <div
+              class="burger-line line-2 absolute h-0.5 w-6 bg-white top-2.5"
+            ></div>
+            <div
+              class="burger-line line-3 absolute h-0.5 w-6 bg-white top-5"
+            ></div>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden mt-4 pb-4 hidden">
+          <div class="flex flex-col space-y-4 pt-4">
+            <a
+              href="#about"
+              class="hover:text-cyan-400 transition text-sm mobile-menu-link"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="hover:text-cyan-400 transition text-sm mobile-menu-link"
+              >Skills</a
+            >
+            <a
+              href="#portfolio"
+              class="hover:text-cyan-400 transition text-sm mobile-menu-link"
+              >Portfolio</a
+            >
+            <a
+              href="#organization"
+              class="hover:text-cyan-400 transition text-sm mobile-menu-link"
+              >Activities</a
+            >
+            <a
+              href="#certificates"
+              class="hover:text-cyan-400 transition text-sm mobile-menu-link"
+              >Certificates</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-cyan-400 transition text-sm mobile-menu-link"
               >Contact</a
             >
           </div>
@@ -73,13 +162,13 @@
               class="w-48 rounded-xl mx-auto mb-6 border-2 border-cyan-400"
             />
           </div>
-          <h1 class="text-2xl md:text-4xl font-bold mb-4">
+          <h1 class="text-2xl md:text-4xl font-extrabold mb-4">
             <span class="gradient-text">Aritza Ganendra Kusuma, A.Md.Kom</span>
           </h1>
-          <p class="text-gray-200 text-lg mb-2">
+          <p class="text-gray-200 text-lg mb-2 font-semibold">
             Web Developer & UI/UX Designer
           </p>
-          <p class="text-gray-400 max-w-2xl mx-auto mb-8 text-sm">
+          <p class="text-gray-400 max-w-3xl mx-auto mb-8 text-sm md:text-base">
             Lulusan Teknik Informatika dengan keahlian dalam pengembangan
             website menggunakan framework modern seperti Laravel dan Next.js.
             Fokus pada menciptakan solusi digital yang user-friendly dan
@@ -89,19 +178,19 @@
             <a
               href="/assets/CV-Main.pdf"
               target="_blank"
-              class="px-6 py-3 bg-cyan-400 text-gray-900 rounded-lg font-semibold hover:bg-cyan-300 transition"
+              class="px-6 py-3 bg-cyan-400 text-gray-900 rounded-lg font-semibold hover:bg-cyan-300 transition text-sm md:text-base"
             >
               <i class="fas fa-download mr-2"></i>Download CV
             </a>
             <a
               href="#contact"
-              class="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition"
+              class="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition text-sm md:text-base"
             >
               Contact Me
             </a>
           </div>
           <div class="mt-12 text-xs text-gray-400">
-            Put me to <span class="text-cyan-400">work</span> ✨
+            Put me to <span class="text-cyan-400 font-extrabold">work</span> ✨
           </div>
         </div>
       </div>
@@ -289,8 +378,8 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-20">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
-          Portfolio
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text pb-1">
+          My Portfolio
         </h2>
         <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <!-- Project 1 -->
@@ -304,7 +393,7 @@
               class="w-full object-cover"
             />
 
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <span class="text-cyan-400 text-xs font-semibold"
                 >Landing Page</span
               >
@@ -315,19 +404,27 @@
                 Mengembang & mengembangkan website profil program studi dengan
                 desain modern dan responsive.
               </p>
-              <div class="flex space-x-2 mb-4">
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Laravel</span
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >JQuery</span
+                  Laravel
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Filament</span
+                  JQuery
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Tailwind CSS</span
+                  Filament
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
+                  Tailwind CSS
+                </span>
               </div>
               <a
                 href="https://dti.dinus.ac.id/"
@@ -350,7 +447,7 @@
               class="w-full object-cover"
             />
 
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <span class="text-cyan-400 text-xs font-semibold"
                 >Full Stack</span
               >
@@ -361,19 +458,27 @@
                 Sistem monitoring berbasis Website untuk pemantauan akademik
                 mahasiswa.
               </p>
-              <div class="flex space-x-2 mb-4 flex-wrap">
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Laravel</span
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Livewire</span
+                  Laravel
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Tailwind CSS</span
+                  Livewire
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >MySQL</span
+                  MySQL
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
+                  Tailwind CSS
+                </span>
               </div>
               <a
                 href="https://dti.dinus.ac.id/sistem-monitoring-mahasiswa/"
@@ -396,7 +501,7 @@
               class="w-full object-cover"
             />
 
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <span class="text-cyan-400 text-xs font-semibold"
                 >Full Stack</span
               >
@@ -407,19 +512,27 @@
                 Mengembangkan website ticketing sederhana dan landing page klien
                 freelance.
               </p>
-              <div class="flex space-x-2 mb-4">
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Laravel</span
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >JQuery</span
+                  Laravel
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >MySQL</span
+                  JQuery
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Tailwind CSS</span
+                  MySQL
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
+                  Tailwind CSS
+                </span>
               </div>
               <a
                 href="https://skyaccessnetwork.com/"
@@ -442,7 +555,7 @@
               class="w-full object-cover"
             />
 
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <span class="text-cyan-400 text-xs font-semibold"
                 >Landing Page</span
               >
@@ -453,16 +566,22 @@
                 Website Landing Page CV Busana Nyaman Pakai - Produsen Toga
                 Wisuda & Jas Almamater
               </p>
-              <div class="flex space-x-2 mb-4 flex-wrap">
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Laravel</span
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Filament</span
+                  Laravel
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Tailwind CSS</span
+                  Filament
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
+                  Tailwind CSS
+                </span>
               </div>
               <a
                 href="https://konveksibusananyamanpakai.com/"
@@ -485,7 +604,7 @@
               class="w-full object-cover"
             />
 
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <span class="text-cyan-400 text-xs font-semibold"
                 >Full Stack</span
               >
@@ -495,19 +614,27 @@
               <p class="text-gray-400 text-sm mb-4">
                 Wesbite Booking Pernikahan Sederahana Full Stack
               </p>
-              <div class="flex space-x-2 mb-4 flex-wrap">
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Laravel</span
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Filament</span
+                  Laravel
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >NextJS</span
+                  NextJS
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >MySQL</span
+                  Filament
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
+                  Tailwind CSS
+                </span>
               </div>
               <a
                 href="https://github.com/ValKyRiE2117/WeddingWebsite"
@@ -530,7 +657,7 @@
               class="w-full object-cover"
             />
 
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <span class="text-cyan-400 text-xs font-semibold"
                 >E - Commerce</span
               >
@@ -538,19 +665,27 @@
               <p class="text-gray-400 text-sm mb-4">
                 Website E - Commerce Sederhana VeggiePack
               </p>
-              <div class="flex space-x-2 mb-4 flex-wrap">
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >CodeIgniter</span
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Bootstrap</span
+                  CodeIgniter
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >JQuery</span
+                  JQuery
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >MySQL</span
+                  MySQL
+                </span>
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
+                  Bootstrap
+                </span>
               </div>
               <a
                 href="https://github.com/ValKyRiE2117/VeggiePack"
@@ -573,7 +708,7 @@
               class="w-full object-cover"
             />
 
-            <div class="p-6">
+            <div class="p-4 md:p-6">
               <span class="text-cyan-400 text-xs font-semibold">UI/UX</span>
               <h3 class="text-xl font-bold mt-2 mb-3">
                 Staybook App - Hotel Booking App
@@ -581,10 +716,12 @@
               <p class="text-gray-400 text-sm mb-4">
                 Design UI/UX Aplikasi Booking Hotel Modern menggunakan Figma
               </p>
-              <div class="flex space-x-2 mb-4 flex-wrap">
-                <span class="px-3 py-1 bg-gray-800 rounded-full text-xs"
-                  >Figma</span
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+                <span
+                  class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
                 >
+                  Figma
+                </span>
               </div>
               <a
                 href="https://www.figma.com/design/G3UGVmjjAkg2prKaucSWwQ/StayBook?node-id=0-1&t=lie0lWsCjvS8XXlC-1"
@@ -593,6 +730,144 @@
               >
                 <i class="fas fa-arrow-right mr-2"></i>View Project
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organisasi & Kegiatan Section -->
+    <section id="organization" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-10 pb-1 gradient-text">
+          Past Activities & Organization
+        </h2>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Organization Header -->
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-cyan-400 mb-2">
+              Himpunan Mahasiswa D3 Teknik Informatika – UDINUS
+            </h3>
+            <div
+              class="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
+            >
+              <span class="flex items-center">
+                <i class="fas fa-user-tie mr-2"></i>Koordinator Divisi Humas
+              </span>
+              <span class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2"></i>Semarang, Jawa Tengah
+              </span>
+              <span class="flex items-center">
+                <i class="fas fa-calendar-alt mr-2"></i>Agustus 2023 – Agustus
+                2024
+              </span>
+            </div>
+          </div>
+
+          <!-- Activity Cards -->
+          <div class="space-y-4">
+            <!-- Activity 1 -->
+            <div
+              class="glass-card rounded-xl p-6 hover:scale-[1.02] transition-transform"
+            >
+              <div class="flex">
+                <div class="flex-shrink-0 mr-4">
+                  <div
+                    class="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-user-group text-cyan-400"></i>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-gray-200">
+                    Anggota Panitia Sie Acara
+                    <span class="text-cyan-400 font-semibold"
+                      >Dinus Inside 2023</span
+                    >
+                    yang merancang kegiatan Orientasi Studi dan Pengenalan
+                    Kampus Udinus
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div
+              class="glass-card rounded-xl p-6 hover:scale-[1.02] transition-transform"
+            >
+              <div class="flex">
+                <div class="flex-shrink-0 mr-4">
+                  <div
+                    class="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-user-tie text-cyan-400"></i>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-gray-200">
+                    Ketua Pelaksana
+                    <span class="text-cyan-400 font-semibold"
+                      >Workshop Laravel Programming 2023</span
+                    >
+                    yang sukses mendatangkan
+                    <span class="text-cyan-400 font-bold">120+ peserta</span>
+                    dan 3 pemateri profesional
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div
+              class="glass-card rounded-xl p-6 hover:scale-[1.02] transition-transform"
+            >
+              <div class="flex">
+                <div class="flex-shrink-0 mr-4">
+                  <div
+                    class="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-chalkboard-user text-cyan-400"></i>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-gray-200">
+                    Pemateri di
+                    <span class="text-cyan-400 font-semibold"
+                      >FIK FAIR 2024 Goes to Campus</span
+                    >
+                    dengan materi Figma basic kepada
+                    <span class="text-cyan-400 font-bold">80 Peserta</span>
+                    SMA&SMK
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Activity 4 -->
+            <div
+              class="glass-card rounded-xl p-6 hover:scale-[1.02] transition-transform"
+            >
+              <div class="flex">
+                <div class="flex-shrink-0 mr-4">
+                  <div
+                    class="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center"
+                  >
+                    <i class="fa fa-solid fa-users text-cyan-400"></i>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-gray-200">
+                    Koordinator Sie Acara
+                    <span class="text-cyan-400 font-semibold"
+                      >Mobile UI/UX Competition 2024</span
+                    >
+                    yang sukses menghadirkan
+                    <span class="text-cyan-400 font-bold">50 Tim</span> dari
+                    Universitas dan Sekolah di luar Kota Semarang
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -794,5 +1069,6 @@
         </p>
       </div>
     </footer>
+    <script src="/src/app.js"></script>
   </body>
 </html>
